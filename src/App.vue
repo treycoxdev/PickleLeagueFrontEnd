@@ -1,12 +1,10 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/league">League</router-link> |
     <router-link to="/club">Club</router-link> |
-    <router-link to="/player">Player</router-link> |
-    <router-link to="/game">Game</router-link> |
-    <router-link to="/team">Team</router-link>
+    <router-link to="/league">Leagues</router-link> |
+    <router-link to="/team">Teams</router-link> |
+    <router-link to="/player">Players</router-link>
   </nav>
   <router-view />
 </template>
