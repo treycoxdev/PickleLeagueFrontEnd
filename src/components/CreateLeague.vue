@@ -1,27 +1,23 @@
 <template>
   <h2>Create a new League</h2>
-  <form on-submit="createLeague">
-    <label>League Name:</label>
-    <input type="text" v-model="form.LeagueName" />
-    <label>Start Date</label>
-    <input type="date" v-model="form.StartDate" />
-    <select v-model="form.LeagueType">
-      <option v-for="leagueType in LeagueType" :value="leagueType.value">
-        {{ leagueType.type }}
-      </option>
-    </select>
-  </form>
+  <label>League Name:</label>
+  <input type="text" v-model="form.LeagueName" />
+  <label>Start Date</label>
+  <input type="date" v-model="form.StartDate" />
+  <select v-model="form.LeagueType">
+    <option v-for="leagueType in LeagueType" :value="leagueType.value">
+      {{ leagueType.type }}
+    </option>
+  </select>
   <button @click="createLeague">Create</button>
 </template>
+
 <script>
-import { stringLiteral } from "@babel/types";
 import axios from "axios";
 
 export default {
   name: "CreateLeague",
-  props: {
-    LeagueRunnerId: 1,
-  },
+  props: ["LeagueRunnerId"],
   data() {
     return {
       form: {

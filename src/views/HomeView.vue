@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>PickleLeague</h1>
+    <h1>Pickle League</h1>
     <p>Build your leagues more quickly</p>
     <router-link to="/league">Build a Leauge</router-link>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->

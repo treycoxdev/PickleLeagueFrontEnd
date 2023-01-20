@@ -1,12 +1,18 @@
 <template>
   <h2>Create Player</h2>
   <form>
-    <label>First Name:</label>
-    <input type="text" v-model="form.FirstName" />
-    <label>Last Name:</label>
-    <input type="text" v-model="form.LastName" />
-    <label>Email</label>
-    <input type="text" v-model="form.LeagueId" />
+    <div class="form-group">
+      <label>First Name:</label>
+      <input type="text" v-model="form.FirstName" />
+    </div>
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input type="text" v-model="form.LastName" />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" v-model="form.LeagueId" />
+    </div>
   </form>
   <button @click="createPlayer">Create</button>
 </template>

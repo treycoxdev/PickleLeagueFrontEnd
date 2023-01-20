@@ -30,4 +30,34 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #21943a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+form {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  place-items: center;
+}
+.form-group {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  place-items: center;
+}
+
+@media (min-width: 600px) {
+  .form-group-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 </style>

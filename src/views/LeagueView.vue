@@ -82,7 +82,7 @@ export default {
     async fetchLeagues() {
       const gatheredLeagues = await axios.get(
         process.env.VUE_APP_API_LINK +
-          `Leauge/LeagueRunner/${localStorage.LeagueRunnerId}`
+          `/Leauge/LeagueRunner/${localStorage.LeagueRunnerId}`
       );
       this.leagues = gatheredLeagues.data;
     },
