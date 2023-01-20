@@ -1,6 +1,5 @@
 <template>
   <h2>{{ league.leaugeName }}</h2>
-  <p>{{ league.leaugeStartDate }}</p>
   <button
     v-on:click="
       showViewTeam = false;
