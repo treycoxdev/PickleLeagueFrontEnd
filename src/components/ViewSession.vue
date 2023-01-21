@@ -5,10 +5,10 @@
   <div class="sessions" v-if="!showToAdd">
     <div class="group" v-for="session in sessions" :key="session.sessionId">
       {{ getDate(session.sessionTime) }}
-      <button @click="setSessionId(session.sessionId)">Add Games</button>
+      <button @click="setSessionId(session)">Add Games</button>
     </div>
   </div>
-  <CreateGame v-if="showToAdd" :sessionId="sessionIdToAddTo" />
+  <CreateGame v-if="showToAdd" :Session="sessionToAddTo" />
 </template>
 <script>
 import axios from "axios";
@@ -25,7 +25,7 @@ export default {
       sessions: null,
       showCreateSession: false,
       showViewSessions: false,
-      sessionIdToAddTo: "",
+      sessionToAddTo: null,
       showToAdd: false,
     };
   },
@@ -47,8 +47,8 @@ export default {
       });
       return formattedDate;
     },
-    setSessionId(sessionId) {
-      this.sessionIdToAddTo = sessionId;
+    setSessionId(session) {
+      this.sessionToAddTo = session;
       this.showToAdd = true;
     },
     back() {
